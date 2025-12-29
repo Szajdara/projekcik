@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: #232323;
     color: aliceblue;
 }
 
@@ -32,7 +32,6 @@ header {
 
     animation: headerEnter 0.6s ease-out;
 }
-
 
 @keyframes headerEnter {
     from {
@@ -62,6 +61,8 @@ section {
     justify-content: center;
     padding: 10%;
     gap: 20px;
+    font-size: 150%;
+    /* margin: 5%; */
 
 }
 
@@ -99,7 +100,7 @@ section {
     font-size: 20px;
     text-align: center;
 
-    border-radius: 12px;
+    border-radius: 2px;
     position: relative;
     z-index: 0;
 }
@@ -121,10 +122,14 @@ section {
     transform-origin: right center;
 }
 
+.odstep {
+    height: 50px;
+}
 
 .sec1 {
-    min-height: 300px;
-    background-image: url("images/img1.jpg");
+    min-height: 150px;
+    /* background-image: url("images/img1.jpg"); */
+    background-color: #232323;
     background-repeat: no-repeat;
     background-position: 30% 70%;
     background-size: cover;
@@ -161,7 +166,9 @@ section {
 }
 
 .sec4 {
-    background-image: url("images/img4.jpg");
+    height: 100px;
+    /* background-image: url("images/img4.jpg"); */
+     background-color: #232323;
     background-repeat: no-repeat;
     background-position: 70% 30%;
     background-size: cover;
@@ -184,6 +191,8 @@ section {
     --btn-bg-color: hsla(360 100% 100% / 1);
     --radii: 0.5em;
     cursor: pointer;
+    /* display: flex;
+    justify-self: flex-end !important; */
     padding: 0.9em 1.4em;
     min-width: 120px;
     max-height: 44px;
@@ -215,7 +224,7 @@ section {
     }
 }
 
-/* From Uiverse.io by ubaidi10 */
+
 .card1 {
     width: fit-content;
     height: fit-content;
@@ -253,21 +262,21 @@ section {
 
 /* Twitter */
 .containerTwo:hover {
-    background-color: #00acee;
+    background-color: #FF0000;
     transform: scale(1.5);
     border-radius: 15px;
 }
 
 /* LinkedIn */
 .containerThree:hover {
-    background-color: #0072b1;
+    background-color: #23E5DB;
     transform: scale(1.5);
     border-radius: 15px;
 }
 
 /* WhatsApp */
 .containerFour:hover {
-    background-color: #25d366;
+    background-color:#0863F7;
     transform: scale(1.5);
     border-radius: 15px;
 }
