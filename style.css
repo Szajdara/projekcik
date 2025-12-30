@@ -9,10 +9,6 @@ body {
 }
 
 header {
-    font-size: 30px;
-    font-weight: 500;
-    color: black;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,14 +41,128 @@ header {
     }
 }
 
+@media (max-width: 1100px) {
+    header {
+        position: static;
+    }
+
+    .art1 {
+        flex-direction: column !important;
+        gap: 10px;
+    }
+
+    .card {
+        box-sizing: border-box;
+        width: 100% !important;
+        height: 100px !important;
+        transition: none !important;
+    }
+
+    .card:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        position: static;
+        height: 90px;
+    }
+
+    .logo {
+        width: 180px !important;
+    }
+
+    .btn-donate {
+        --size: 2.5vw;
+        height: 40px;
+    }
+
+    .card1 {
+        display: none !important;
+    }
+
+    footer {
+        display: block !important;
+    }
+
+    section {
+        height: 350px;
+    }
+
+    /* dla wszystkich socialContainer */
+    .socialContainer {
+        transform: none !important;
+        background-color: rgb(44, 44, 44) !important;
+        border-radius: 0 !important;
+        /* jeśli chcesz */
+        transition: none !important;
+    }
+
+    /* usuń hover dla poszczególnych kontenerów */
+    .containerOne:hover,
+    .containerTwo:hover,
+    .containerThree:hover,
+    .containerFour:hover {
+        transform: none !important;
+        border-radius: inherit !important;
+    }
+
+    /* usuń active */
+    .socialContainer:active {
+        transform: none !important;
+    }
+
+    @media (hover: hover) {
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+
+
+}
+
+/* logo svg */
+.logo {
+    width: 240px;
+}
+
+tspan {
+    white-space: pre
+}
+
+.t0 {
+    font-size: 137px;
+    fill: #ffffff;
+    font-weight: bold;
+    font-family: "Corbel"
+}
+
+.t1 {
+    font-size: 137px;
+    fill: #ffffff;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Corbel"
+}
+
+.s2 {
+    fill: #ffffff
+}
+
+.t3 {
+    font-size: 38px;
+    fill: #ffffff;
+    font-family: "Lucida Console"
+}
+
 
 footer {
-    min-height: 140px;
-    background-color: rgb(78, 78, 78);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
+    display: none;
+    height: 100px;
 }
 
 section {
@@ -75,11 +185,37 @@ section {
 }
 
 /* fancy sekcja article */
+
+.content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    /* albo #fff zależnie od tła */
+    padding: 20px;
+    font-size: 170%;
+    text-shadow: 0 0px 10px rgba(0, 0, 0, 0.758);
+}
+
+.card {
+    position: relative;
+    background-image: url("zdjecie.jpg");
+    background-size: cover;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(3px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
 .card {
     width: 350px;
     height: 235px;
     padding: 25px;
-    background:
+    /* background:
         radial-gradient(178.94% 106.41% at 26.42% 106.41%,
             #FFF7B1 0%,
             rgba(255, 255, 255, 0) 71.88%),
@@ -87,7 +223,9 @@ section {
     box-shadow:
         0 10px 21px rgba(0, 0, 0, 0.1),
         0 39px 39px rgba(0, 0, 0, 0.09),
-        0 87px 52px rgba(0, 0, 0, 0.05);
+        0 87px 52px rgba(0, 0, 0, 0.05); */
+
+
     transition:
         transform 0.35s cubic-bezier(0.15, 0.83, 0.66, 1),
         box-shadow 0.35s ease,
@@ -154,7 +292,9 @@ section {
     background-attachment: fixed;
 }
 
+
 .text_sec_title {
+    font-size: clamp(30px, 3vw, 50px);
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -165,10 +305,14 @@ section {
     transform: translateY(0);
 }
 
+section>p {
+    font-size: clamp(20px, 2vw, 2vw) !important;
+}
+
 .sec4 {
     height: 100px;
     /* background-image: url("images/img4.jpg"); */
-     background-color: #232323;
+    background-color: #232323;
     background-repeat: no-repeat;
     background-position: 70% 30%;
     background-size: cover;
@@ -177,12 +321,9 @@ section {
 
 .art1 {
     display: flex;
+    flex-direction: row;
 }
 
-
-.text_sec_title {
-    font-size: 40px;
-}
 
 .btn-donate {
     --clr-font-main: hsla(0 0% 20% / 100);
@@ -224,6 +365,19 @@ section {
     }
 }
 
+.card2 {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+    padding: 4vw 4vw;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+    position: relative;
+}
 
 .card1 {
     width: fit-content;
@@ -232,18 +386,20 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25px 25px;
-    gap: 20px;
+    padding: 1.5vw 1.5vw;
+    gap: 2vw;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
     position: fixed;
-    bottom: 20px;
-    left: 20px;
+    bottom: 2vw;
+    left: 0.5vw;
     z-index: 9999;
 }
 
 .socialContainer {
-    width: 52px;
-    height: 52px;
+    max-width: 52px;
+    width: 10vw;
+    max-height: 52px;
+    height: 10vw;
     background-color: rgb(44, 44, 44);
     display: flex;
     align-items: center;
@@ -260,23 +416,23 @@ section {
     border-radius: 15px;
 }
 
-/* Twitter */
+/* Youtube */
 .containerTwo:hover {
     background-color: #FF0000;
     transform: scale(1.5);
     border-radius: 15px;
 }
 
-/* LinkedIn */
+/* OLX */
 .containerThree:hover {
     background-color: #23E5DB;
     transform: scale(1.5);
     border-radius: 15px;
 }
 
-/* WhatsApp */
+/* FB */
 .containerFour:hover {
-    background-color:#0863F7;
+    background-color: #0863F7;
     transform: scale(1.5);
     border-radius: 15px;
 }
@@ -309,6 +465,6 @@ section {
     }
 }
 
-    .card1:has(.socialContainer:hover) .socialContainer:not(:hover) {
+.card1:has(.socialContainer:hover) .socialContainer:not(:hover) {
     opacity: 0.1;
 }
