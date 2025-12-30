@@ -91,10 +91,30 @@ header {
         height: 350px;
     }
 
+    /* Instagram */
+    .containerOne {
+        background-color: #d629778d !important;
+    }
+
+    /* Youtube */
+    .containerTwo {
+        background-color: #ff000072 !important;
+    }
+
+    /* OLX */
+    .containerThree{
+        background-color: #23e5db72 !important;
+    }
+
+    /* FB */
+    .containerFour {
+        background-color: #0864f77b !important;
+    }
+
     /* dla wszystkich socialContainer */
     .socialContainer {
         transform: none !important;
-        background-color: rgb(44, 44, 44) !important;
+        /* background-color: rgb(44, 44, 44) !important; */
         border-radius: 0 !important;
         /* jeśli chcesz */
         transition: none !important;
@@ -322,6 +342,7 @@ section>p {
 .art1 {
     display: flex;
     flex-direction: row;
+    gap: 7px;
 }
 
 
@@ -388,7 +409,7 @@ section>p {
     justify-content: center;
     padding: 1.5vw 1.5vw;
     gap: 2vw;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.422);
     position: fixed;
     bottom: 2vw;
     left: 0.5vw;
