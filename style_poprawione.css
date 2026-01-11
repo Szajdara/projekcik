@@ -599,7 +599,6 @@ li{
 
 .card {
   min-width: 280px;
-  background: #333;
   color: white;
   padding: 20px;
   border-radius: 12px;
@@ -613,7 +612,7 @@ li{
         radial-gradient(178.94% 106.41% at 26.42% 106.41%,
             #ff9966 0%,
             rgba(255, 255, 255, 0) 71.88%),
-        #303030;
+        #353535;
     box-shadow:
         0 10px 21px rgba(0, 0, 0, 0.1),
         0 39px 39px rgba(0, 0, 0, 0.09),
@@ -632,7 +631,6 @@ li{
     font-size: 20px;
     text-align: center;
 
-    border-radius: 2px;
     position: relative;
     z-index: 0;
 }
