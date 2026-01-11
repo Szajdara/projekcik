@@ -452,7 +452,39 @@
                 behavior: "smooth"
             });
         }
-    </script>
+
+      
+const track = document.querySelector('.track');
+const slider = document.querySelector('.slider');
+
+let speed = 0.5;   // prędkość przesuwania
+let position = 0;
+let isPaused = false;
+
+// klonujemy elementy (JS pętla)
+const cards = [...track.children];
+cards.forEach(card => {
+  track.appendChild(card.cloneNode(true));
+});
+
+function animate() {
+  if (!isPaused) {
+    position -= speed;
+
+    if (Math.abs(position) >= track.scrollWidth / 2) {
+      position = 0;
+    }
+
+    track.style.transform = `translateX(${position}px)`;
+  }
+  requestAnimationFrame(animate);
+}
+
+
+animate();
+</script>
+
+
 </body>
 
 </html>

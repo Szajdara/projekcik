@@ -583,7 +583,7 @@ li{
     font-size: 1.5vw;
 }
 
-.slider {
+/* .slider {
   width: 100%;
   overflow: hidden;
   margin-bottom: 2vw;
@@ -596,7 +596,7 @@ li{
 }
 
 .card {
-  min-width: 280px; /* zamiast % */
+  min-width: 280px;
   background-color: #333;
   color: #fff;
   border-radius: 7px;
@@ -613,4 +613,28 @@ li{
   to {
     transform: translateX(-50%);
   }
+} */
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
+
+.track {
+  display: flex;
+  gap: 20px;
+  will-change: transform;
+}
+
+.card {
+  min-width: 280px;
+  background: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+  margin-bottom: 2vw;
+}
+
