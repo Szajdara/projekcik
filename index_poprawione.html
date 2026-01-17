@@ -47,14 +47,17 @@
         <button class="boton-elegante" onclick="scrollToHome()">Home</button>
         <button class="boton-elegante" onclick="scrollToOnas()">O nas</button>
         <button class="boton-elegante" onclick="scrollToUslugin()">Usługi</button>
-        <button class="boton-elegante" onclick="scrollToAdres()">Adres</button>
+        <button class="boton-elegante" onclick="scrollToRealizacje()">Realizacje</button>
+         <button class="boton-elegante" onclick="scrollToAdres()">Kontakt</button>
         <button class="btn-donate" onclick="copyPhone()">+48 123 456 789</button>
     </header>
     <main id="home">
         <div class="contener box1">
-            <div class="tekst_w_box1">Usługi inżynierskie dronem z precyzją i nowoczesnym podejściem</div>
-            <div class="obrazek"><img src="" alt="" width="70%"></div>
+            <div class="tekst_w_box1" style="margin: 1.5vw;">Usługi inżynieryjne z wykorzystaniem dronów – bezpieczne, precyzyjne i oparte na nowoczesnych technologiach.</div>
+            <div class="obrazek"></div>
         </div>
+
+        <h1 style="margin-bottom: 1.5vw;">Dlaczego warto wybrać Drone in Engineering:</h2>
         <div class="slider" id="slider">
             <div class="track">
 
@@ -179,7 +182,7 @@
         </article>
     </main>
     <section class="contener box2" id="onas">
-        <div class="skos lewy">
+        <div class="skos lewy zdjecie1">
             <h4 class="content wo_imia_rtx5090">
                 Drony zmieniają inżynierię
             </h4>
@@ -201,7 +204,7 @@
             a nasze doświadczenie i wiedza pozwalają zapewnić wysoką
             jakość usług oraz zadowolenie klientów.
         </p>
-        <div class="skos prawy">
+        <div class="skos prawy zdjecie2">
             <h5 class="content" id="uslugi">
                 Ponad 30+ lat doświadczenia w branże budowlanej. Od 2017 roku na rynku utrzymanie i zarządzanie
                 nieruchomościami w Polsce.
@@ -209,26 +212,30 @@
         </div>
     </section>
 
-    <h1>Efektywność na wysokim poziomie </h1>
+    <h1 style="margin-top: 3vw;">W jakich branżach dostarczamy uslugi: </h1>
     <article class="art1">
-        <div class="card1" style=" width: 22%; background-color: #333;" onclick="location.href='energetyka itd.html'">
+        <div class="card1" style=" width: 22%; background-color: #333;"  onclick="location.href='energetyka itd.html'">
+             <div class="overlay"></div>
             <div class="content"> Energetyka
-                <h6 style="display: flex; justify-self: center;">sprawdź</h6>
+                <p style="font-size: 20px;"> Inspekcja farm fotowoltaicznych z wykorzystaniem technologii RGB i termowizji, nie zakłócając jej pracy</p>
             </div>
         </div>
-        <div class="card1" style=" width: 22%;  background-color: #333;" onclick="location.href='energetyka itd.html'">
+        <div class="card1" style=" width: 22%;  background-color: #333;" onclick="location.href='energetyka itd.html#budownictwo'">
+              <div class="overlay"></div>
             <div class="content"> Budownictwo
-                <h6 style="display: flex; justify-self: center;">sprawdź</h6>
+                 <p style="font-size: 20px;">Dokumentacja postępu prac budowlanych, inspekcje dachów, kominów czy terenu pod inwestycje</p>
             </div>
         </div>
-        <div class="card1" style="width: 22%;  background-color: #333;" onclick="location.href='energetyka itd.html'">
+        <div class="card1" style="width: 22%;  background-color: #333;" onclick="location.href='energetyka itd.html#geodezja'">
+              <div class="overlay"></div>
             <div class="content"> Geodezja
-                <h6 style="display: flex; justify-self: center;">sprawdź</h6>
+                <p style="font-size: 20px;"> Tworzeniu ortofotomap z niskiego pułapu, które pozwalają na precyzyjne odwzorowanie terenu w wysokiej rozdzielczości</p>
             </div>
         </div>
-        <div class="card1" style="width: 22%;  background-color: #333;" onclick="location.href='energetyka itd.html'">
+        <div class="card1" style="width: 22%;  background-color: #333;" onclick="location.href='energetyka itd.html#ubezpieczenia'">
+              <div class="overlay"></div>
             <div class="content"> Ubezpieczenie
-                <h6 style="display: flex; justify-self: center;">sprawdź</h6>
+                 <p style="font-size: 20px;"> Gromadzenia danych przed ubezpieczeniem ryzyka, pomoc w zapobiegawczej konserwacji oraz oczywiście do oceny szkód po zdarzeniu</p>
             </div>
         </div>
     </article>
@@ -334,6 +341,15 @@
         </a>
 
     </div>
+        <div class="contener box1" style="flex-direction: column;" >
+            <div class="tekst_w_box1">Nieustannie podnosimy kwalifikacje po to, żeby móc świadczyć usługi na najwyższym poziomie.</div>
+            <div class="obrazek1"id="Realizacje"></div>
+        </div>
+
+           <div class="contener box1" style="flex-direction: column; padding: 0;">
+            <div class="tekst_w_box1">Nasze Realizacje - Zobacz jakość naszej pracy </div>
+            <div class="obrazek2"></div>
+        </div>
 
     <footer id="adres">
         <h1>Gdzie nas można znaleźć?</h1>
@@ -419,6 +435,12 @@
                 behavior: "smooth"
             });
         }
+                function scrollToRealizacje() {
+            document.getElementById("Realizacje").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
 
 
         const track = document.querySelector('.track');
